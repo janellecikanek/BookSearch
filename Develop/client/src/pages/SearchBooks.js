@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+// Import the `useParams()` hook
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+
 
 import Auth from '../utils/auth';
 import { saveBook, searchGoogleBooks } from '../utils/API';

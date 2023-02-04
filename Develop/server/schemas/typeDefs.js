@@ -1,5 +1,7 @@
 const { gql } = require('apollo-server-express');
 
+// what kind of datatypes does each attribute in a table have
+
 const typeDefs = gql`
   type User {
     _id: ID
@@ -7,7 +9,6 @@ const typeDefs = gql`
     email: String
     bookCount: Int
     savedBooks: [String]!
-
   }
 
   type Book {
@@ -15,9 +16,8 @@ const typeDefs = gql`
     authors: [String]
     description: String
     title: String
-    image: Boolean
+    image: String
     link: String
-
   }
 
   type Auth {
